@@ -1,266 +1,187 @@
-/* This overrides the web browser default */
+/* styles.css */
+:root {
+  --bg: #f8f7f4;
+  --text: #1f1f1f;
+  --muted: #6f6a63;
+  --line: #e7e1d8;
+  --card: #fffdf9;
+  --accent: #111111;
+  --radius: 16px;
+}
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    /* These are my Google Fonts*/
-	/* font-family: "Henny Penny", cursive; */
-	/* font-family: "Jaro", sans-serif; */
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	color: #333;
-	background-color: #fff;
+  margin: 0;
+  font-family: "Georgia", serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
 }
 
-/*--------This Is My Top Navigation-------*/
- .top-nav {
-	 display: flex;
-	 justify-content: space-between;
-	 align-items: center;
-	 padding: 16px 40px;
-	 background-color: #F9F904;
-	 border-bottom: 1px solid #ddd;
- }
- 
-.logo {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #F94949;
+a {
+  color: inherit;
   text-decoration: none;
-  font-family: "Henny Penny", cursive;
-  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
 }
 
- .small-logo {
-	 font-size: 1.1rem;
-	 font-weight: bold;
-	 color: #000;
-	 text-decoration: none;
-	 font-family: "Henny Penny", cursive;
- }
-
-.top-nav nav {
-	display: flex;
-	gap: 12px;  /* space between buttons */
+.container {
+  width: min(1040px, calc(100% - 2rem));
+  margin: 0 auto;
 }
 
-.nav-button {
-	padding: 8px 16px;
-	border-radius: 4px;
-	background-color: #fff;
-	color: #000;
-	text-decoration: none;
-	font-family: "Jaro", sans-serif;
+.site-header {
+  padding: 1.25rem 0;
 }
 
-.nav-button:hover {
-	background-color: #FBFBD5;
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.learn-more-button {
-	padding: 8px 16px;
-	border-radius: 4px;
-	background-color: #F9F904;
-	color: #F94949;
-	text-decoration: none;
-	font-family: "Jaro", sans-serif;
+.logo {
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
 }
 
-.learn-more-button:hover {
-	background-color: #FBFBD5;
+.nav {
+  display: flex;
+  gap: 1rem;
+  color: var(--muted);
 }
 
-/*--------This Is My Hero--------*/
 .hero {
-	position: relative;
-	height: 80vh; /* 80% of the screen height */
-	overflow: hidden;
+  padding: 5rem 0 3rem;
 }
 
-/*Using Cover to crop photos */
-.hero img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
 }
 
-/*Text sits over the photo, centered */
-.hero-text {
-	position: absolute;
-	inset: 0; /* stretches to cover the hero */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.35);
-	color: #fff;
-	text-align: center;
-	font-family: "Jaro", sans-serif;
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 0.98;
+  max-width: 10ch;
+  font-weight: 400;
 }
 
-.hero-text h1 {
-	/*Resizing my fonts smoother */
-	font-size: clamp(1.5rem, 4vw, 3rem);
+.intro {
+  max-width: 34rem;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
-/*--------Title--------*/
-.title {
-	position: relative;
-	height: 10vh; /* 10% of the screen height */
-	overflow: hidden;
+.section {
+  padding: 2rem 0;
 }
 
-.title img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.narrow {
+  max-width: 42rem;
 }
 
-.title-text {
-	position: absolute;
-	inset: 0; 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #FBFBD5;
-	color: #000;
-	text-align: center;
-	font-family: "Jaro", sans-serif;
-	font-size: 16px;
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
-.title-text h1 {
-	font-size: clamp(1.5rem, 4vw, 3rem);
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
-/*--------Three-Column grid--------*/
-/*grid-template-columns: repeat (3, 1fr) makes three equal columns. Each new row starts automatically, so six cards make two rows. */
-
-/*This is my menu grid*/
-
-.grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 24px;
-	padding: 40px;
+.work-card {
+  display: block;
 }
 
-.card img {
-	width: 100%;
-	height: 220px;
-	object-fit: cover;
-	border-radius: 6px;
+.work-thumb,
+.project-image {
+  background: #ece6dc;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
 
-.card h3 {
-	margin-top: 12px;
-	color: #2c3e50;
+.work-thumb {
+  aspect-ratio: 4 / 5;
+  margin-bottom: 0.75rem;
 }
 
-.card p {
-	margin-top: 6px;
+.work-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-/*This is my home grid*/
-
-.home-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 24px;
-	padding: 40px;
-	background-color: #F94949;
+.work-card p,
+.meta,
+.site-footer,
+.back-link {
+  color: var(--muted);
 }
 
-.home-card img {
-	width: auto;
-	height: 350px;
-	object-fit: cover;
-	border-radius: 6px;
+.work-card p {
+  margin: 0.15rem 0 0;
+  font-size: 0.95rem;
 }
-
-.home-card h2 {
-	margin-top: 12px;
-	color: #000;
-	font-size: 24px;
-}
-
-.home-card p {
-	margin-top: 6px;
-}
-
-/*This is my footer grid*/
-
-.footer-grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 24px;
-	padding: 40px;
-	background-color: #fbfbd5;
-}
-
-.footer-card img {
-	width: 100%;
-	height: 220px;
-	object-fit: cover;
-	border-radius: 6px;
-} 
-
-.social-image {
-  width: 80px;
-  height: auto;
-}
-
-.footer-card h5 {
-	margin-top: 12px;
-	color: #2c3e50;
-}
-
-.footer-card p {
-	margin-top: 6px;
-	font-size: 12px;
-}
-
-/*--------Footer--------*/
 
 .site-footer {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 16px;
-	background-color: #2c3e50;
-	color: #ecf0f1;
-	padding: 24px 40px;
+  padding: 2rem 0;
 }
 
-.site-footer a {
-	color: #ecf0f1;
-	text-decoration: none;
+.project-page {
+  padding-bottom: 3rem;
 }
 
-.site-footer a:hover {
-	text-decoration: underline;
+.back-link {
+  display: inline-block;
+  margin: 1.5rem 0;
 }
 
-.social-links {
-	display: flex;
-	gap: 16px;
-	margin-left: auto;
+.project h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 400;
 }
 
-/*--------Small screens--------*/
-/*On narrow screens, stack the columns into one */
-@media (max-width: 768px) {
-	.grid {
-		grid-template-columns: 1fr;
-	}
-	
-.top-nav {
-	flex-direction: column;
-	gap: 12px;
+.meta {
+  margin: 0.5rem 0 1.25rem;
+}
+
+.project-image {
+  min-height: 420px;
+}
+
+.project-text {
+  max-width: 42rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
   }
-.hero-text h1 {
-	font-size: 2rem;
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding-top: 3rem;
   }
 }
