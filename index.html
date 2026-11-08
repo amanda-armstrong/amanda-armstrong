@@ -1,71 +1,84 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda Armstrong - Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jaro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
- </head>
- <body>
- 
-   <header class="top-nav">
-   <a href="index.html" class="logo">Amanda Armstrong - Portfolio</a>
-   <nav>
-     <a href="dogswithdogs.html" class="nav-button">Dogs with Dogs sample website</a>
-  </nav>
- </header>
- 
- <section class="hero">
-   <img src="images/hero.jpg" alt="Hero Alt Text">
-   <div class="hero-text">
-     <h1>.</h1>
-  </div>
-</section>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amanda Armstrong — Illustrator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Your Name</a>
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="home-grid">
-  <div class="home-card">
-    <h2>.</h2>
-	<p>.</p>
-	   <br>
-     <a href="#" class="learn-more-button">Learn More</a>
-	  
-</div>
- <div class="home-card">
-    <img src="images/adoptdontshopart.jpg" alt="2">
-	<h3></h3>
-	<p></p>
-</div>
- 
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Illustrator</p>
+      <h1>Minimalism and clean lines.</h1>
+      <p class="intro">
+        A short sentence about your style, clients, or themes you explore in your work.
+      </p>
+    </section>
 
-</main>
+    <section id="work" class="container section">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+      </div>
 
+      <div class="work-grid">
+        <a class="work-card" href="project.html">
+          <div class="work-thumb"></div>
+          <h3>Project Title One</h3>
+          <p>Editorial illustration</p>
+        </a>
 
-<main class="footer-grid">
-  <div class="footer-card">
-	<p><a href="index.html" class="small-logo">Home</a></p>
-</div>
- <div class="footer-card">
-	<h5>Contact Us</h5>
-	<p>.<br>
-	   .<br>
-	   .</p>
-</div>
- <div class="footer-card">
-	<h5>Learn More</h5>
-	<p>Blog<br>
-	</p>
-</div>
- <div class="footer-card">
-	<h5>Support</h5>
-	<p>Legal</p>
-</div>
- <div>
-  <p><img class="social-image" src="images/Socials.jpg" alt="Social Media"></p>
-</div>
-</main>
+        <a class="work-card" href="project.html">
+          <div class="work-thumb"></div>
+          <h3>Project Title Two</h3>
+          <p>Personal series</p>
+        </a>
 
- </body>
- </html>
+        <a class="work-card" href="project.html">
+          <div class="work-thumb"></div>
+          <h3>Project Title Three</h3>
+          <p>Commissioned work</p>
+        </a>
+
+        <a class="work-card" href="project.html">
+          <div class="work-thumb"></div>
+          <h3>Project Title Four</h3>
+          <p>Book cover</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="container section narrow">
+      <h2>About</h2>
+      <p>
+        Write a short bio here. Keep it warm, simple, and direct. Mention your focus, location, or
+        the kind of projects you like.
+      </p>
+    </section>
+
+    <section id="contact" class="container section narrow">
+      <h2>Contact</h2>
+      <p><a href="mailto:you@example.com">you@example.com</a></p>
+      <p><a href="#">Instagram</a> · <a href="#">Behance</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Your Name</p>
+    </div>
+  </footer>
+</body>
+</html>
