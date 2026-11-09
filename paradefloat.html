@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanksgiving Day Parade Trip Giveaway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="floatstyle.css">
+</head>
+ 
+<body>
+  <header class="top-nav">
+    <a href="paradefloat.html" class="logo">Parade Trip Giveaway</a>
+    <nav>
+      <a href="#prize" class="nav-button">Your Prize</a>
+      <a href="#details" class="nav-button">Details</a>
+      <a href="#contact" class="nav-button">Contact</a>
+    </nav>
+  </header>
+  
+  <img src="images/floatedited.png" class="float" alt="float">
+
+<style>
+  .float {
+    position: relative;
+    animation: moveAcross 10s linear infinite;
+  }
+
+  @keyframes moveAcross {
+    from { transform: translateX(0); }
+    to   { transform: translateX(500px); }
+  }
+</style>
+  <section class="title">
+    <div class="title-text">
+      <h1>You're Entered!</h1>
+      <p>Thanks for entering to win a trip to the Macy’s Thanksgiving Day Parade sponsored by Brach's Candy!</p>	    
+    <img src="images/macysballoons.png"
+     alt="An illustration of Macy's Star Balloons"
+     class="macys-balloons"
+     style="width: 300px; height: auto;">
+    </div>
+  </section>
+  
+  <main class="grid">
+    <div class="card" id="prize">
+      <h2>NYC Thanksgiving</h2>
+      <p>Imagine celebrating Thanksgiving in New York City and watching the parade in person!</p>
+    </div>
+
+    <div class="card" id="details">
+      <h2>What Happens Next?</h2>
+      <p>The winner will be selected on November 12th, 2026. Check your email for an update!</p>
+    </div>
+
+    <div class="card">
+      <h2>Good Luck!</h2>
+      <p>We hope you have a wonderful Thanksgiving and enjoy the excitement of the parade.</p>
+    </div>
+  </main>
+
+  <footer class="footer-grid" id="contact">
+    <div class="footer-card">
+      <p><a href="paradefloat.html" class="small-logo">Parade Trip Giveaway</a></p>
+    </div>
+
+    <div class="footer-card">
+      <h2>Questions?</h2>
+      <p>Contact: Brach's Candy Headquarters</p>
+    </div>
+
+    <div class="footer-card">
+      <p>This page is part of a school project and not a real giveaway.</p>
+    </div>
+  </footer>
+</body>
+</html>
