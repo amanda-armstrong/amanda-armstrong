@@ -1,0 +1,185 @@
+/* Reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Limelight";
+  line-height: 1.6;
+  color: #26334a;
+  background-color: #fffdf7;
+}
+
+/* Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 40px;
+  background-color: #b51f32;
+  border-bottom: 4px solid #d6ac43;
+}
+
+.logo {
+  color: #fffdf7;
+  font-family: "Limelight";
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  
+}
+
+.top-nav nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 8px 14px;
+  border-radius: 4px;
+  background-color: #fffdf7;
+  color: #26334a;
+  font-family: "Jaro", sans-serif;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+  background-color: #f3dfaa;
+}
+
+body {
+  margin: 0;
+  background-color: #26334a;
+}
+
+.float {
+  width: 400px;
+  height: 370px;
+  position: relative;
+  animation: moveAcross 10s linear infinite;
+}
+
+
+/* Entry confirmation banner */
+.title {
+  min-height: 260px;
+  background-color: #f3dfaa;
+}
+
+.title-text {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 20px;
+  color: #26334a;
+  text-align: center;
+}
+
+.title-text h1 {
+  color: #b51f32;
+  font-family: "Limelight";
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.2;
+}
+
+.title-text p {
+  max-width: 650px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.macys-balloons {
+  width: 300px !important;
+  height: auto;
+}
+
+
+/* Main content cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.card {
+  padding: 28px 24px;
+  background-color: #fff;
+  border: 1px solid #eadfca;
+  border-top: 5px solid #b51f32;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(38, 51, 74, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #26334a;
+  font-family: "Limelight";
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #444;
+}
+
+/* Footer */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 32px 40px;
+  background-color: #26334a;
+  color: #fffdf7;
+}
+
+.footer-card h2 {
+  margin-bottom: 6px;
+  color: #f3dfaa;
+  font-family: "Limelight";
+  font-size: 1.2rem;
+}
+
+.footer-card p {
+  font-size: 1rem;
+}
+
+.small-logo {
+  color: #fffdf7;
+  font-family: "Limelight";
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    padding: 18px 20px;
+  }
+
+  .top-nav nav {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+  }
+}
